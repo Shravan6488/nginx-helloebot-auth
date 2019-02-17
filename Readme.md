@@ -12,6 +12,8 @@ server accepts handled requests
 Reading: 0 Writing: 1 Waiting: 0
 
 
+#Environment variables
+
 |Key	          |Descriptio
 | ------------- | ------------- |
 |BASIC_AUTH_USERNAME  |Basic auth username  |
