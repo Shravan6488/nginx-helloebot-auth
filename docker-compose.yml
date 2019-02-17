@@ -7,24 +7,23 @@ services:
     ports:
       - 8080:80
       - 8090:8090
-       - 9000:9000
-        links:
-            - mongodb
-        depends_on:
-            - mongodb
-    mongodb:
-        image: mongo:latest
-        container_name: "mongodb"
-        environment:
-          - MONGO_DATA_DIR=/data/db
-          - MONGO_LOG_DIR=/dev/null
-          - MONGODB_USER="user" 
-          - MONGODB_PASS="pass"
-        volumes:
-          - ./data/db:/data/db
-        ports:
-            - 27017:27017
-        command: mongod --smallfiles --logpath=/dev/null # --quiet
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - MONGODB_USER="user" 
+      - MONGODB_PASS="pass"
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
     environment:
       - BASIC_AUTH_USERNAME=admin
       - BASIC_AUTH_PASSWORD=ebot7
