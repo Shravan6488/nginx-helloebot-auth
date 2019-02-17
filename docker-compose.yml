@@ -3,7 +3,7 @@ services:
   web:
     image: shravan6488/hello-ebot7:ebot7
   nginx:
-    image: shravan6488/nginx-basic-auth-proxy:latest
+    image: shravan6488/hello-ebot7:nginx-auth
     ports:
       - 8080:80
       - 8090:8090
