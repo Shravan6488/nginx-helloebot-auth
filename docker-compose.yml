@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: shravan6488/hello-ebot7:latest
+    image: shravan6488/hello-ebot7:ebot7
   nginx:
     image: quay.io/dtan4/nginx-basic-auth-proxy:latest
     ports:
