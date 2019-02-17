@@ -8,6 +8,6 @@ services:
       - 8080:80
       - 8090:8090
     environment:
-      - BASIC_AUTH_USERNAME=username
-      - BASIC_AUTH_PASSWORD=password
+      - BASIC_AUTH_USERNAME=admin
+      - BASIC_AUTH_PASSWORD=ebot7
       - PROXY_PASS=http://web/
